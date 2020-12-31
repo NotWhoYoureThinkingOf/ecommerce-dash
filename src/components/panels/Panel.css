@@ -1,0 +1,46 @@
+.panel{
+  overflow:hidden;
+  position:relative;
+  display: flex;
+  justify-content: center;
+  cursor:pointer;
+}
+
+.panel:hover img{
+  transform:scale(1.03);
+  filter:brightness(30%)
+}
+
+.panel:hover .panel__text{
+  opacity:1
+}
+
+.panel img{
+  object-fit:contain;
+  width:100%;
+  transform:scale(1.08);
+  transition:all .7s ease;
+  
+}
+
+.panel__text{
+  position:absolute;
+  top:100px;
+  color:white;
+  text-align: center;
+  opacity:0;
+  transition: all .5s ease;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.panel__text h3{
+  font-size:2.5rem;
+  font-weight:300;
+}
+
+.panel__text p{
+  font-size:1.5rem;
+  font-weight:300;
+}

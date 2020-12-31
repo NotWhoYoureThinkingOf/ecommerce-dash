@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.infoItem{
+  color:white;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content: center;
+  min-height:556.667px;
+  cursor:pointer;
+}
+
+.infoItem:hover{
+  flex:1;
+}
+
+.infoItem__image{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.infoItem__image img{
+  object-fit:contain;
+  height:300px;
+  max-width:100%;
+  transition:all .3s ease;
+  transform: scale(1.2);
+  z-index:10;
+
+}
+
+.infoItem__shadow{
+  width:90%;
+  height:10px;
+  border-radius:100px;
+  background-color: rgba(0,0,0, 1);
+  filter:blur(15px);
+  z-index:1;
+  transform:translateY(-40px);
+}
+
+.infoItem__details{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  transition:all .2s ease;  
+}
+
+.details__container{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  position:absolute;
+  bottom:50px;
+  z-index:10;
+}
+
+.details__container h2{
+  font-size:4rem;
+  font-weight:400;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.details__container ul{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  display:none;
+  /* opacity:0; */
+}
+
+.infoItem__keyBoard{
+  display:flex;
+}
+
+.keyboard h2{
+  background:linear-gradient(
+    to right, 
+    #f10e0f, #ca10ad 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:transparent;
+}
+
+.mouse h2{
+  background:linear-gradient(
+    to right, 
+    #c976ff, #f56d8a 40%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:transparent;
+}
+
+.cooler h2{
+  background:linear-gradient(
+    to right, 
+    #40fd0d, #01f3f6 30%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:transparent;
+}
+
+.mouseImage{
+  transform:scale(.8) !important;
+}
+
+.keyboardImage{
+  transform:scale(1.5) !important;
+}

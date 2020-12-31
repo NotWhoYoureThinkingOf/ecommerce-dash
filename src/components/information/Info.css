@@ -1,0 +1,39 @@
+.info{
+  background: linear-gradient(to bottom, rgba(17,17,17, 0.8) 0%,rgba(17,17,17, 1) 100%);
+  padding:150px 0px;
+  display:grid;
+  /* justify-content: space-evenly; */
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  align-items:center;
+  padding: 100px 300px 150px;
+  position:relative;
+  gap:300px;
+}
+
+.info__title{
+  position:absolute;
+  top:20px;
+  left:30px;
+  color:white;
+  font-weight:400;
+  /* font-style:italic; */
+}
+
+.info__keyboard{
+  color:white;
+  display:flex;
+  flex-direction:column;
+}
+
+.info__mouse{
+  display:flex;
+  flex-direction:column;
+  color:white;
+}
+
+.info__cooler{
+  display:flex;
+  flex-direction:column;
+  color:white;
+}
+
