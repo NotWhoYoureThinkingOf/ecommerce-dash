@@ -18,7 +18,7 @@ const Highlight = () => {
             definition?
           </div>
         </div>
-        <Link to="/products/button">
+        <Link to="/allproducts">
           <Button>SHOP HEADSETS NOW</Button>
         </Link>
       </div>

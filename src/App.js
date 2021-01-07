@@ -13,6 +13,8 @@ import MainPage from "./components/mainPage/MainPage";
 import ProductPage from "./components/productPage/ProductPage";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
+import AllProducts from "./components/allproducts/AllProducts";
+import Login from "./components/Login/Login";
 
 function App() {
   // const location = useLocation();
@@ -22,10 +24,22 @@ function App() {
       <AnimatePresence exitBeforeEnter>
         <Switch>
           {/* customer side */}
-          {/* products page */}
+          {/* product page */}
           <Route path="/products/:productId">
             <Header />
             <ProductPage />
+            <Footer />
+          </Route>
+          {/* all products page */}
+          <Route path="/allproducts">
+            <Header />
+            <AllProducts />
+            <Footer />
+          </Route>
+          {/* login */}
+          <Route path="/login">
+            <Header />
+            <Login />
             <Footer />
           </Route>
           {/* main page */}

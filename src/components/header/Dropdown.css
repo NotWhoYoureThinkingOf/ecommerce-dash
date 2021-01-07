@@ -1,0 +1,44 @@
+.dropdown{
+  width:100%;
+  background:white;
+  left:0;
+  display:flex;
+  justify-content: center;
+  z-index:998;
+  padding:20px 0;
+  gap:30px;
+}
+
+.dropdown__left{
+  
+}
+
+.dropdown__list{
+  display:flex;
+  flex-direction:column;
+  border-right:1px solid rgba(0,0,0,.1);
+  padding-right:25px;
+  height:100%;
+}
+
+.dropdown li{
+  list-style:none;
+  display:inline-block;
+}
+
+.dropdown a{
+  padding:0;
+  font-size:.85rem;
+  display:block;
+  color:black;
+}
+
+.dropdown__right{
+  display:flex;
+  gap:30px;
+}
+
+.dropdown__picture img{
+  object-fit:contain;
+  height:300px;
+}

@@ -16,7 +16,6 @@ const MainPage = () => {
         <Banner />
         <Info />
         <Highlight />
-        {/* corsair/radeon website for last section before footer */}
         <Panels />
         <Footer />
       </div>
