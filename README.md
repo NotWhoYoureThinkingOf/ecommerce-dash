@@ -27,4 +27,25 @@ Goals:
 - Use GraphQL to get information from an API
 - Make full stack with Express and MongoDB
 
-- Add links to seperate products from AllProducts and select which kind of product from there
+Notes
+
+AllProducts.js:
+
+- Add links to seperate products to AllProducts.js and select which kind of product from there
+- all-products-animation1 video ideas: Side options stagger up from bottom in a sidebar menu and reveal products in the category. Either grid-esque setup or carousel? Start products absolute positioning off screen left and shoot out right maybe with a stagger. also similar idea in similar-to-what-i-want.gif
+- add carousel for keyboards and mice
+- add enter animation state and seperate exit animation state
+
+Info.js:
+
+- main-products-highlight.mp4: idea for products shown on main page maybe
+
+App.js:
+
+- try to incorporate something from after effects using the youtube tutorials (FLIMLION channel)
+
+Products.js:
+
+- add a page for keyboards
+- add a page for mice
+- change the pictures/details headsets page to call in selected item stuff

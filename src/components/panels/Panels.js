@@ -3,13 +3,7 @@ import Panel from "./Panel";
 import "./Panels.css";
 import panel1 from "../../assets/panel1.png";
 import panel2 from "../../assets/panel2.PNG";
-import panel3 from "../../assets/panel3.jpg";
-import panel4 from "../../assets/panel4.jpg";
 import panel5 from "../../assets/panel5.jpg";
-import panel6 from "../../assets/panel6.jpg";
-import panel7 from "../../assets/panel7.png";
-import panel8 from "../../assets/panel8.png";
-import panel9 from "../../assets/panel9.jpg";
 
 const Panels = () => {
   return (

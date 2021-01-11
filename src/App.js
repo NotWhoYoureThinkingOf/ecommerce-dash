@@ -1,12 +1,6 @@
 import React from "react";
 import "./App.css";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useLocation,
-  withRouter,
-} from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import MainPage from "./components/mainPage/MainPage";
@@ -32,9 +26,7 @@ function App() {
           </Route>
           {/* all products page */}
           <Route path="/allproducts">
-            <Header />
             <AllProducts />
-            <Footer />
           </Route>
           {/* login */}
           <Route path="/login">

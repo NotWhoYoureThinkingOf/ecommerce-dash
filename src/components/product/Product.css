@@ -1,0 +1,6 @@
+.product h3{
+  text-transform: capitalize;
+  color:white;
+  font-size:1.8rem;
+  font-weight:400;
+}

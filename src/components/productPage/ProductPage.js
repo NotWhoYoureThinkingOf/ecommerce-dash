@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./ProductPage.css";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   Add,
   AirlineSeatReclineExtra,
-  DesktopWindows,
   Equalizer,
   Hearing,
   Remove,
@@ -13,7 +12,6 @@ import {
 import { Button } from "@material-ui/core";
 import headset3 from "../../assets/headset3.png";
 import headphoneswide1 from "../../assets/headphoneswide1.jpg";
-import headphoneswide2 from "../../assets/headphoneswide2.jpg";
 import headphoneswide5 from "../../assets/headphoneswide5.jpg";
 import headphoneswide8 from "../../assets/headphoneswide8.jpg";
 import thxLogo from "../../assets/thxLogo.png";
@@ -22,12 +20,8 @@ import { motion } from "framer-motion";
 import Indicators from "./Indicators";
 
 const ProductPage = () => {
-  const { productId } = useParams();
   // make data.js with products
-  const [viewportWidth, setViewportWidth] = useState(0);
-  const [pageHeight, setPageHeight] = useState(0);
   const [scrolledFar, setScrolledFar] = useState(false);
-  const [position, setPosition] = useState(0);
   const [scrollStuck, setScrollStuck] = useState(false);
 
   useScrollPosition(({ prevPos, currPos }) => {
