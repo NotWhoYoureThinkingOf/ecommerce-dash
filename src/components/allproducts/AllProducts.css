@@ -31,16 +31,53 @@
   color:white;
   font-size:1.8rem;
   font-weight:400;
-  padding:20px 0;
+  padding:30px 0;
+  width: 100%;
+  text-align: center;
+  transition:all .3s ease;
 }
 
-.allProducts__products{
+.headsets{
+  background-color:white !important;
+  color: #141e30 !important;
+}
+
+.keyboards{
+  background-color:white !important;
+  color: #141e30 !important;
+}
+
+.mice{
+  background-color:white !important;
+  color: #141e30 !important;
+}
+
+.allProducts__productBox{
   flex:0.85;
   background: linear-gradient(to right, #141e30 0%, #243b55 100%);
   overflow:hidden;
   padding:0 75px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  position:relative;
+}
+
+.allProducts__products{
+  /* flex:0.85; */
+  /* background: linear-gradient(to right, #141e30 0%, #243b55 100%); */
+  overflow:hidden;
+  /* padding:0 75px; */
+  /* display: flex;
+  align-items: center; */
+  position:absolute;
+  height:100%;
+  width: 93%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 75px;
+  transform:translateY(100%);
 }
 
 .slick-slider{
