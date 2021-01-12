@@ -10,7 +10,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const AllProducts = () => {
-  const [selectedProducts, setSelectedProducts] = useState("");
+  const [selectedProducts, setSelectedProducts] = useState("headsets");
   const [products, setProducts] = useState([]);
   const [headsetProducts, setHeadsetProducts] = useState([]);
   const [miceProducts, setMiceProducts] = useState([]);
@@ -192,9 +192,7 @@ const AllProducts = () => {
                     miceProducts.map((mouse, i) => (
                       <CollectionProduct
                         key={i}
-                        image={
-                          "https://drive.google.com/file/d/1HxkXF2a6Xm33WXkq7nZvKIwoGEjrnY8e/view?usp=sharing"
-                        }
+                        image={mouse.image}
                         brand={mouse.brand}
                         name={mouse.name}
                         price={mouse.price}
@@ -222,9 +220,7 @@ const AllProducts = () => {
                     keyboardProducts.map((keyboard, i) => (
                       <CollectionProduct
                         key={i}
-                        image={
-                          "https://drive.google.com/file/d/1HxkXF2a6Xm33WXkq7nZvKIwoGEjrnY8e/view?usp=sharing"
-                        }
+                        image={keyboard.image}
                         brand={keyboard.brand}
                         name={keyboard.name}
                         price={keyboard.price}
@@ -252,9 +248,7 @@ const AllProducts = () => {
                     headsetProducts.map((headset, i) => (
                       <CollectionProduct
                         key={i}
-                        image={
-                          "https://drive.google.com/file/d/1HxkXF2a6Xm33WXkq7nZvKIwoGEjrnY8e/view?usp=sharing"
-                        }
+                        image={headset.image}
                         brand={headset.brand}
                         name={headset.name}
                         price={headset.price}
