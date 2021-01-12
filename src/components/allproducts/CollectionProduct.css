@@ -19,6 +19,7 @@
 .collectionProduct__top img{
   object-fit:contain;
   height:230px;
+  max-width:75%;
 }
 
 .collectionProduct__bottom{

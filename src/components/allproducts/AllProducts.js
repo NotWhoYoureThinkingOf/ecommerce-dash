@@ -12,6 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 const AllProducts = () => {
   const [selectedProducts, setSelectedProducts] = useState("mice");
   const [products, setProducts] = useState([]);
+  const [headsetProducts, setHeadsetProducts] = useState([]);
   const [miceProducts, setMiceProducts] = useState([]);
   const [keyboardProducts, setKeyboardProducts] = useState([]);
   const settings = {
@@ -74,6 +75,26 @@ const AllProducts = () => {
         )
       );
 
+    db.collection("products")
+      .doc("8o0MOnQoCNOIQFI7VZ96")
+      .collection("product")
+      .onSnapshot((snapshot) =>
+        setHeadsetProducts(
+          snapshot.docs.map((doc) => ({
+            id: doc,
+            image: doc.data().imageUrl,
+            brand: doc.data().brand,
+            name: doc.data().name,
+            price: doc.data().price,
+            description1: doc.data().description1,
+            description2: doc.data().description2,
+            description3: doc.data().description3,
+            description4: doc.data().description4,
+            description5: doc.data().description5,
+          }))
+        )
+      );
+
     // const storageRef = storage.ref();
 
     // const imagesRef = storageRef.child("images");
@@ -121,40 +142,69 @@ const AllProducts = () => {
             </div>
           ))} */}
         </div>
-        <div className="allProducts__products">
-          <Slider {...settings}>
-            {selectedProducts === "mice" &&
-              miceProducts.map((mouse, i) => (
-                <CollectionProduct
-                  key={i}
-                  image={mouse.image}
-                  brand={mouse.brand}
-                  name={mouse.name}
-                  price={mouse.price}
-                  description1={mouse.description1}
-                  description2={mouse.description2}
-                  description3={mouse.description3}
-                  description4={mouse.description4}
-                  description5={mouse.description5}
-                />
-              ))}
-            {selectedProducts === "keyboards" &&
-              keyboardProducts.map((keyboard, i) => (
-                <CollectionProduct
-                  key={i}
-                  image={keyboard.image}
-                  brand={keyboard.brand}
-                  name={keyboard.name}
-                  price={keyboard.price}
-                  description1={keyboard.description1}
-                  description2={keyboard.description2}
-                  description3={keyboard.description3}
-                  description4={keyboard.description4}
-                  description5={keyboard.description5}
-                />
-              ))}
-          </Slider>
-        </div>
+        {selectedProducts === "mice" && (
+          <div className="allProducts__products">
+            <Slider {...settings}>
+              {selectedProducts === "mice" &&
+                miceProducts.map((mouse, i) => (
+                  <CollectionProduct
+                    key={i}
+                    image={mouse.image}
+                    brand={mouse.brand}
+                    name={mouse.name}
+                    price={mouse.price}
+                    description1={mouse.description1}
+                    description2={mouse.description2}
+                    description3={mouse.description3}
+                    description4={mouse.description4}
+                    description5={mouse.description5}
+                  />
+                ))}
+            </Slider>
+          </div>
+        )}
+        {selectedProducts === "keyboards" && (
+          <div className="allProducts__products">
+            <Slider {...settings}>
+              {selectedProducts === "keyboards" &&
+                keyboardProducts.map((keyboard, i) => (
+                  <CollectionProduct
+                    key={i}
+                    image={keyboard.image}
+                    brand={keyboard.brand}
+                    name={keyboard.name}
+                    price={keyboard.price}
+                    description1={keyboard.description1}
+                    description2={keyboard.description2}
+                    description3={keyboard.description3}
+                    description4={keyboard.description4}
+                    description5={keyboard.description5}
+                  />
+                ))}
+            </Slider>
+          </div>
+        )}
+        {selectedProducts === "headsets" && (
+          <div className="allProducts__products">
+            <Slider {...settings}>
+              {selectedProducts === "headsets" &&
+                headsetProducts.map((headset, i) => (
+                  <CollectionProduct
+                    key={i}
+                    image={headset.image}
+                    brand={headset.brand}
+                    name={headset.name}
+                    price={headset.price}
+                    description1={headset.description1}
+                    description2={headset.description2}
+                    description3={headset.description3}
+                    description4={headset.description4}
+                    description5={headset.description5}
+                  />
+                ))}
+            </Slider>
+          </div>
+        )}
       </div>
       <Footer />
     </div>
