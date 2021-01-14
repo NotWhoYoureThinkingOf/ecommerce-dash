@@ -10,22 +10,22 @@ const Dropdown = () => {
       <div className="dropdown__left">
         <ul className="dropdown__list">
           <li>
-            <Link to="allproducts" style={{ padding: 0 }}>
+            <Link to="/allproducts" style={{ padding: 0 }}>
               Shop All
             </Link>
           </li>
           <li>
-            <Link to="keyboards" style={{ padding: 0 }}>
+            <Link to="/products/keyboards" style={{ padding: 0 }}>
               Keyboards
             </Link>
           </li>
           <li>
-            <Link to="mice" style={{ padding: 0 }}>
+            <Link to="/products/mice" style={{ padding: 0 }}>
               Mice
             </Link>
           </li>
           <li>
-            <Link to="headsets" style={{ padding: 0 }}>
+            <Link to="/products/headsets" style={{ padding: 0 }}>
               Headsets
             </Link>
           </li>

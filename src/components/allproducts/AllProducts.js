@@ -41,7 +41,7 @@ const AllProducts = () => {
       .onSnapshot((snapshot) =>
         setMiceProducts(
           snapshot.docs.map((doc) => ({
-            id: doc,
+            id: doc.id,
             image: doc.data().imageUrl,
             brand: doc.data().brand,
             name: doc.data().name,
@@ -61,7 +61,7 @@ const AllProducts = () => {
       .onSnapshot((snapshot) =>
         setKeyboardProducts(
           snapshot.docs.map((doc) => ({
-            id: doc,
+            id: doc.id,
             image: doc.data().imageUrl,
             brand: doc.data().brand,
             name: doc.data().name,
@@ -81,7 +81,7 @@ const AllProducts = () => {
       .onSnapshot((snapshot) =>
         setHeadsetProducts(
           snapshot.docs.map((doc) => ({
-            id: doc,
+            id: doc.id,
             image: doc.data().imageUrl,
             brand: doc.data().brand,
             name: doc.data().name,
@@ -163,7 +163,7 @@ const AllProducts = () => {
             <h3
               onClick={() => setSelectedProducts("mice")}
               className={`allProducts__menuItem ${
-                selectedProducts === "mice" && "mice"
+                selectedProducts === "mice" && "miceMenu"
               }`}
             >
               Mice
@@ -192,6 +192,8 @@ const AllProducts = () => {
                     miceProducts.map((mouse, i) => (
                       <CollectionProduct
                         key={i}
+                        id={mouse.id}
+                        link={`/products/mice/${mouse.id}`}
                         image={mouse.image}
                         brand={mouse.brand}
                         name={mouse.name}
@@ -220,6 +222,8 @@ const AllProducts = () => {
                     keyboardProducts.map((keyboard, i) => (
                       <CollectionProduct
                         key={i}
+                        id={keyboard.id}
+                        link={`/products/keyboards/${keyboard.id}`}
                         image={keyboard.image}
                         brand={keyboard.brand}
                         name={keyboard.name}
@@ -248,6 +252,8 @@ const AllProducts = () => {
                     headsetProducts.map((headset, i) => (
                       <CollectionProduct
                         key={i}
+                        id={headset.id}
+                        link={`/products/headsets/${headset.id}`}
                         image={headset.image}
                         brand={headset.brand}
                         name={headset.name}

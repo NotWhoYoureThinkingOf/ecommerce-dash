@@ -9,6 +9,7 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import AllProducts from "./components/allproducts/AllProducts";
 import Login from "./components/Login/Login";
+import MicePage from "./components/mice/MicePage";
 
 function App() {
   // const location = useLocation();
@@ -19,6 +20,10 @@ function App() {
         <Switch>
           {/* customer side */}
           {/* product page */}
+          <Route path="/products/mice/:productId">
+            <MicePage />
+          </Route>
+
           <Route path="/products/:productId">
             <Header />
             <ProductPage />
