@@ -31,10 +31,7 @@ Notes
 
 AllProducts.js:
 
-- Add links to seperate products to AllProducts.js and select which kind of product from there
-- all-products-animation1 video ideas: Side options stagger up from bottom in a sidebar menu and reveal products in the category. Either grid-esque setup or carousel? Start products absolute positioning off screen left and shoot out right maybe with a stagger. also similar idea in similar-to-what-i-want.gif
-- add carousel for keyboards and mice
-- add enter animation state and seperate exit animation state
+- move firebase api call from AllProducts to MainPage and add to redux from there so products can be accessed right away
 
 Info.js:
 

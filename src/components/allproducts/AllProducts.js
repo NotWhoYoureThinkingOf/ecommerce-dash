@@ -51,6 +51,7 @@ const AllProducts = () => {
             description3: doc.data().description3,
             description4: doc.data().description4,
             description5: doc.data().description5,
+            pageImage: doc.data().pageImage,
           }))
         )
       );

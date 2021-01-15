@@ -27,7 +27,7 @@
   transition:all .3s ease;
   transform: scale(1.2);
   z-index:10;
-
+  filter: drop-shadow(-5px 30px 10px rgba(0,0,0,.6));
 }
 
 .infoItem__shadow{
@@ -95,7 +95,7 @@
 .cooler h2{
   background:linear-gradient(
     to right, 
-    #40fd0d, #01f3f6 30%
+    #40fd0d, #01f3f6 60%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color:transparent;
@@ -103,6 +103,7 @@
 
 .mouseImage{
   transform:scale(.8) !important;
+  filter: drop-shadow(5px 36px 10px rgba(0,0,0,0.6)) !important;
 }
 
 .keyboardImage{

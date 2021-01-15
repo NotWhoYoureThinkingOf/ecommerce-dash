@@ -30,7 +30,7 @@ const InfoItem = ({
     >
       <div className="infoItem__image">
         <img className={imageClass} src={image} alt="" />
-        <div className="infoItem__shadow"></div>
+        {/* <div className="infoItem__shadow"></div> */}
       </div>
 
       <div className="infoItem__details">
