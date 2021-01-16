@@ -1,0 +1,22 @@
+.second{
+  background:rgb(255, 184, 184);
+  color:white;
+  display:flex;
+  justify-content: flex-end;
+  height:100vh;
+}
+
+h1{
+  z-index:100;
+  margin:0 75px;
+}
+
+.box2{
+  position:absolute;
+  background-color:black;
+  height:80vh;
+  width:80vw;
+  right:0px;
+  /* border-radius:0px; */
+  z-index:10
+}

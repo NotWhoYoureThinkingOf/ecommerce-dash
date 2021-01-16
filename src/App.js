@@ -10,6 +10,7 @@ import Footer from "./components/footer/Footer";
 import AllProducts from "./components/allproducts/AllProducts";
 import Login from "./components/Login/Login";
 import MicePage from "./components/mice/MicePage";
+import Testing from "./components/testing/Testing";
 
 function App() {
   // const location = useLocation();
@@ -38,6 +39,10 @@ function App() {
             <Header />
             <Login />
             <Footer />
+          </Route>
+
+          <Route path="/testing">
+            <Testing />
           </Route>
           {/* main page */}
           <Route path="/" exact>

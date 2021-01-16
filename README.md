@@ -29,6 +29,13 @@ Goals:
 
 Notes
 
+MainPage.js:
+
+- might apply to everywhere but try to leave product that is selected visible while page changes around it.
+- might involve animateSharedLayout from Framer. Example on https://codesandbox.io/s/framer-motion-layout-animation-svg-viewbox-qjx0j?file=/src/App.js that uses layout prop but not animateSharedLayout
+- another example on https://codesandbox.io/s/framer-motion-2-animatesharedlayout-animate-between-different-components-dy0bv?file=/src/App.js that does use animateSharedLayout
+- call products from firestore here and add to redux so they can be accessed everywhere
+
 AllProducts.js:
 
 - move firebase api call from AllProducts to MainPage and add to redux from there so products can be accessed right away
