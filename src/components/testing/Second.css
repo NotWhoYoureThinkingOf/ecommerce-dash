@@ -1,5 +1,4 @@
 .second{
-  background:rgb(255, 184, 184);
   color:white;
   display:flex;
   justify-content: flex-end;
@@ -8,15 +7,39 @@
 
 h1{
   z-index:100;
-  margin:0 75px;
+  
 }
 
 .box2{
   position:absolute;
   background-color:black;
-  height:80vh;
-  width:80vw;
-  right:0px;
+  height:43vh;
+  width:43vw;
+  right:10px;
+  top:10px;
   /* border-radius:0px; */
-  z-index:10
+  z-index:10;
+  overflow:hidden;
 }
+
+.clipped{
+  position:absolute;
+  height:100%;
+  width:100%;
+  overflow:hidden;
+}
+
+.clipped img{
+  object-fit:cover;
+  width:100%;
+
+}
+
+.clipped h3{
+  position:relative;
+  top:500px;
+}
+/* 
+.box2 img{
+  max-width:initial;
+} */

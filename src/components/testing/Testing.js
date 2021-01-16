@@ -15,7 +15,12 @@ const Testing = () => {
             onClick={() => setShownComponent(!shownComponent)}
             className="firstComp"
           >
-            <First layoutId={"yeet"} layoutId2={"lit"} layoutId3={"fam"} />
+            <First
+              layoutId={"yeet"}
+              layoutId2={"lit"}
+              layoutId3={"fam"}
+              background={"bro"}
+            />
           </div>
         )}
         {!shownComponent && (
@@ -23,7 +28,12 @@ const Testing = () => {
             onClick={() => setShownComponent(!shownComponent)}
             className="secondComp"
           >
-            <Second layoutId={"yeet"} layoutId2={"lit"} layoutId3={"fam"} />
+            <Second
+              layoutId={"yeet"}
+              layoutId2={"lit"}
+              layoutId3={"fam"}
+              background={"bro"}
+            />
           </div>
         )}
       </div>
