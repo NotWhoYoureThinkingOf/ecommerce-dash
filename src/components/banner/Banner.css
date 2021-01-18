@@ -35,6 +35,7 @@
 .banner__right img{
   object-fit:cover;
   width:109%;
+  height:100%;
 }
 
 .banner__right p {
@@ -46,6 +47,14 @@
   opacity: 0.7;
 }
 
+.slick-slider{
+  height:100%;
+}
+
+.slick-list{
+  height:100%;
+}
+
 .slick-slide{
   pointer-events:none;
   visibility: hidden;
@@ -54,4 +63,20 @@
 .slick-slide.slick-active.slick-current{
   pointer-events:auto;
   visibility: visible;
+}
+
+.banner__carousel1{
+  height:100%;
+}
+
+.banner__carousel2{
+  height:100%;
+}
+
+.banner__carousel3{
+  height:100%;
+}
+
+.banner__carousel4{
+  height:100%;
 }

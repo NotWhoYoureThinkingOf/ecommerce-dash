@@ -11,7 +11,7 @@ import mouse5 from "../../assets/mouse5.jpg";
 
 const Banner = () => {
   const settings = {
-    dots: true,
+    dots: false,
     fade: true,
     infinite: true,
     autoplay: true,

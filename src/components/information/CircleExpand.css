@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.circleExpand{
+  height:100%;
+  width:100%;
+  z-index:100;
+}
+
+.circleExpand__content{
+  position:relative;
+  height:100%;
+  display:flex;
+}
+
+.circleExpand__return{
+  color:white;
+  position:absolute;
+  cursor:pointer;
+}
+
+.content__left{
+  flex:0.6;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.content__left img{
+  object-fit:contain;
+  height: 75%;
+  filter: drop-shadow(30px 30px 10px rgba(0,0,0,1));
+  transform:scale(1);
+}
+
+.content__right{
+  flex:0.4;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap:50px;
+}
+
+.content__rightTop{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.content__title{
+  font-family: 'Permanent Marker', cursive;
+  background:linear-gradient(
+    to right, 
+    #ff4445 20%, #ca10ad 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:transparent;
+  font-size:5rem;
+}
+
+.content__right ul li{
+  color:white;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.content__rightBuy{
+  margin-left: 35px;
+}
+
+.rightBuy__container{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  max-width:600px;
+}
+
+.rightBuy__container h3{
+  font-size: 2rem;
+  font-weight:500;
+  font-family: 'Permanent Marker', cursive;
+    background: linear-gradient( to right, #ff4445, #ca10ad 30% );
+    -webkit-background-clip: text;
+  -webkit-text-fill-color:transparent;
+}
+
+.rightBuy__options{
+  display:flex;
+  gap:30px;
+}
+
+.rightBuy__option{
+  flex:0.5;
+}
+
+.rightBuy__option p{
+  margin-bottom:15px;
+}
+
+.rightBuy__optionTitle{
+  color:white;
+}
+
+.rightBuy__option form select{
+  padding:15px 20px;
+  font-size:1.1rem;
+  width:100%;
+  cursor:pointer;
+}
+
+.rightBuy__quantity{
+  flex:0.5;
+}
+
+.rightBuy__quantity p{
+  margin-bottom:15px;
+  color:white;
+}
+
+.rightBuy__count{
+  display:flex;
+  align-items:center;
+  /* padding:0px 0px; */
+  gap:50px;
+}
+
+.rightBuy__count p{
+  font-size:1.4rem;
+  margin:0;
+}
+
+.rightBuy__count > .MuiSvgIcon-root{
+  border:2px solid rgba(0,0,0,.1);
+  border-radius:999px;
+  padding:12px;
+  transition: all 0.2s ease;
+  cursor:pointer;
+  color:white;
+}
+
+.rightBuy__count > .MuiSvgIcon-root:hover{
+  background-color:rgba(27,23,37,1);
+  color:white;
+}
+
+.rightBuy__addToCart{
+  display:flex;
+  align-items:center;
+  margin-top:30px;
+  width:fit-content;
+}
+
+.rightBuy__addToCart > .MuiSvgIcon-root{
+  border:1px solid rgba(27,23,37,1);
+  padding:14px;
+  color:rgba(131,0,247,1);
+}
+
+.rightBuy__addToCart > .MuiButton-root{
+  border-radius:0;
+  background-color:rgba(27,23,37,1);
+  color:white;
+  padding:15px 190px;
+}
+
+.rightBuy__addToCart > .MuiButton-root:hover{
+  background-color:whitesmoke;
+  color:rgba(27,23,37,1)
+}
+
+.rightBuy__addToCart > .MuiButton-root > .MuiButton-label{
+  transition: all .3s ease;
+}

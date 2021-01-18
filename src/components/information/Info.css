@@ -8,22 +8,25 @@
   padding: 100px 300px 150px;
   position:relative;
   gap:300px;
+  overflow:hidden;
 }
 
 .info__title{
-  position:absolute;
-  top:20px;
-  left:30px;
-  color:white;
-  font-weight:400;
-  /* font-style:italic; */
+  position: absolute;
+  top: 20px;
+  left: 2%;
+  color: white;
+  font-weight: 400;
+  font-size: 2rem;
 }
 
 .info__keyboard{
   color:white;
   display:flex;
   flex-direction:column;
+  /* position:relative; */
 }
+
 
 .info__mouse{
   display:flex;
@@ -35,5 +38,39 @@
   display:flex;
   flex-direction:column;
   color:white;
+}
+
+.keyboard__circle{
+  position:absolute;
+  top:0%;
+  left:0%;
+  height:100%;
+  width:100%;
+  pointer-events:none;
+}
+
+.keyboard__circleExpand{
+  position:absolute;
+  top:0%;
+  left:0%;
+  height:100%;
+  width:100%;
+}
+
+.mouse__circle{
+  position:absolute;
+  top:0%;
+  left:0%;
+  height:100%;
+  width:100%;
+  pointer-events:none;
+}
+
+.mouse__circleExpand{
+  position:absolute;
+  top:0%;
+  left:0%;
+  height:100%;
+  width:100%;
 }
 

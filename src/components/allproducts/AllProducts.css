@@ -80,6 +80,11 @@
   transform:translateY(100%);
 }
 
+.allProducts__products > .slick-slider{
+  /* top:50%; */
+  height:fit-content;
+}
+
 .slick-slider{
   width:100%;
 }
