@@ -8,13 +8,22 @@ import CollectionProduct from "./CollectionProduct";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { releaseMice, selectMice } from "../../features/mice/miceSlice";
+import {
+  releaseKeyboards,
+  selectKeyboards,
+} from "../../features/keyboards/keyboardsSlice";
+import {
+  releaseHeadsets,
+  selectHeadsets,
+} from "../../features/headsets/headsetsSlice";
+import { useSelector } from "react-redux";
 
 const AllProducts = () => {
+  const mice = useSelector(selectMice);
+  const keyboards = useSelector(selectKeyboards);
+  const headsets = useSelector(selectHeadsets);
   const [selectedProducts, setSelectedProducts] = useState("headsets");
-  const [products, setProducts] = useState([]);
-  const [headsetProducts, setHeadsetProducts] = useState([]);
-  const [miceProducts, setMiceProducts] = useState([]);
-  const [keyboardProducts, setKeyboardProducts] = useState([]);
   const settings = {
     fade: false,
     infinite: true,
@@ -23,94 +32,6 @@ const AllProducts = () => {
     slidesToShow: 4,
     slidesToScroll: 2,
   };
-
-  // calling from db so that more types of products can easily be added later in the dashboard as product line grows/changes
-  useEffect(() => {
-    db.collection("products").onSnapshot((snapshot) =>
-      setProducts(
-        snapshot.docs.map((doc) => ({
-          id: doc.id,
-          name: doc.data().name,
-        }))
-      )
-    );
-
-    db.collection("products")
-      .doc("MGSHZ1tujiFcMnsg47jF")
-      .collection("product")
-      .onSnapshot((snapshot) =>
-        setMiceProducts(
-          snapshot.docs.map((doc) => ({
-            id: doc.id,
-            image: doc.data().imageUrl,
-            brand: doc.data().brand,
-            name: doc.data().name,
-            price: doc.data().price,
-            description1: doc.data().description1,
-            description2: doc.data().description2,
-            description3: doc.data().description3,
-            description4: doc.data().description4,
-            description5: doc.data().description5,
-            pageImage: doc.data().pageImage,
-          }))
-        )
-      );
-
-    db.collection("products")
-      .doc("EA5T4fH22ynofbFmOyG2")
-      .collection("product")
-      .onSnapshot((snapshot) =>
-        setKeyboardProducts(
-          snapshot.docs.map((doc) => ({
-            id: doc.id,
-            image: doc.data().imageUrl,
-            brand: doc.data().brand,
-            name: doc.data().name,
-            price: doc.data().price,
-            description1: doc.data().description1,
-            description2: doc.data().description2,
-            description3: doc.data().description3,
-            description4: doc.data().description4,
-            description5: doc.data().description5,
-          }))
-        )
-      );
-
-    db.collection("products")
-      .doc("8o0MOnQoCNOIQFI7VZ96")
-      .collection("product")
-      .onSnapshot((snapshot) =>
-        setHeadsetProducts(
-          snapshot.docs.map((doc) => ({
-            id: doc.id,
-            image: doc.data().imageUrl,
-            brand: doc.data().brand,
-            name: doc.data().name,
-            price: doc.data().price,
-            description1: doc.data().description1,
-            description2: doc.data().description2,
-            description3: doc.data().description3,
-            description4: doc.data().description4,
-            description5: doc.data().description5,
-          }))
-        )
-      );
-
-    // const storageRef = storage.ref();
-
-    // const imagesRef = storageRef.child("images");
-    // const headsetsRef = imagesRef.child("headset-products.png");
-    // const keyboardsRef = imagesRef.child("keyboard-products.png");
-    // const miceRef = imagesRef.child("mice-products.png");
-
-    // headsetsRef
-    //   .getDownloadURL()
-    //   .then((url) => {
-    //     console.log(url);
-    //     setHeadsetsPic(url);
-    //   })
-    //   .catch((error) => console.log(error));
-  }, []);
 
   useEffect(() => {
     console.log("selectedProducts", selectedProducts);
@@ -170,12 +91,6 @@ const AllProducts = () => {
               Mice
             </h3>
           </div>
-
-          {/* {products.map((product) => (
-            <div className="allProducts__selection">
-              <Product key={product.id} name={product.name} />
-            </div>
-          ))} */}
         </div>
         <div className="allProducts__productBox">
           <AnimatePresence exitBeforeEnter>
@@ -190,7 +105,7 @@ const AllProducts = () => {
               >
                 <Slider {...settings}>
                   {selectedProducts === "mice" &&
-                    miceProducts.map((mouse, i) => (
+                    mice.map((mouse, i) => (
                       <CollectionProduct
                         key={i}
                         id={mouse.id}
@@ -220,7 +135,7 @@ const AllProducts = () => {
               >
                 <Slider {...settings}>
                   {selectedProducts === "keyboards" &&
-                    keyboardProducts.map((keyboard, i) => (
+                    keyboards.map((keyboard, i) => (
                       <CollectionProduct
                         key={i}
                         id={keyboard.id}
@@ -250,7 +165,7 @@ const AllProducts = () => {
               >
                 <Slider {...settings}>
                   {selectedProducts === "headsets" &&
-                    headsetProducts.map((headset, i) => (
+                    headsets.map((headset, i) => (
                       <CollectionProduct
                         key={i}
                         id={headset.id}
@@ -278,3 +193,64 @@ const AllProducts = () => {
 };
 
 export default AllProducts;
+
+// db.collection("products")
+//       .doc("MGSHZ1tujiFcMnsg47jF")
+//       .collection("product")
+//       .onSnapshot((snapshot) =>
+//         setMiceProducts(
+//           snapshot.docs.map((doc) => ({
+//             id: doc.id,
+//             image: doc.data().imageUrl,
+//             brand: doc.data().brand,
+//             name: doc.data().name,
+//             price: doc.data().price,
+//             description1: doc.data().description1,
+//             description2: doc.data().description2,
+//             description3: doc.data().description3,
+//             description4: doc.data().description4,
+//             description5: doc.data().description5,
+//             pageImage: doc.data().pageImage,
+//           }))
+//         )
+//       );
+
+//     db.collection("products")
+//       .doc("EA5T4fH22ynofbFmOyG2")
+//       .collection("product")
+//       .onSnapshot((snapshot) =>
+//         setKeyboardProducts(
+//           snapshot.docs.map((doc) => ({
+//             id: doc.id,
+//             image: doc.data().imageUrl,
+//             brand: doc.data().brand,
+//             name: doc.data().name,
+//             price: doc.data().price,
+//             description1: doc.data().description1,
+//             description2: doc.data().description2,
+//             description3: doc.data().description3,
+//             description4: doc.data().description4,
+//             description5: doc.data().description5,
+//           }))
+//         )
+//       );
+
+//     db.collection("products")
+//       .doc("8o0MOnQoCNOIQFI7VZ96")
+//       .collection("product")
+//       .onSnapshot((snapshot) =>
+//         setHeadsetProducts(
+//           snapshot.docs.map((doc) => ({
+//             id: doc.id,
+//             image: doc.data().imageUrl,
+//             brand: doc.data().brand,
+//             name: doc.data().name,
+//             price: doc.data().price,
+//             description1: doc.data().description1,
+//             description2: doc.data().description2,
+//             description3: doc.data().description3,
+//             description4: doc.data().description4,
+//             description5: doc.data().description5,
+//           }))
+//         )
+//       );

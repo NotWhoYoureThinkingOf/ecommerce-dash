@@ -168,84 +168,8 @@ const Info = () => {
           </motion.div>
         )}
       </motion.div>
-      {/* {mouseItem && (
-        <motion.div className="info">
-          <h2 className="info__title">New Releases</h2>
-          <KeyboardGone
-            layoutId="keyboard"
-            imageClass="keyboardImage"
-            tagline="Spectre Pro"
-            image={keyboard}
-          />
-
-          <motion.div className="info__mouse">
-            <MouseSelected
-              className="mouse"
-              imageClass="mouseImage"
-              tagline="Torque"
-              image={mouse}
-              layoutId="mouse"
-              layoutIdImg="mouseImg"
-              layoutIdTitle="mouseTitle"
-            />
-          </motion.div>
-          <motion.div className="info__cooler">
-            <CoolerGone
-              className="cooler"
-              tagline="Mirage"
-              image={cooler}
-              layoutId="cooler"
-            />
-          </motion.div>
-        </motion.div>
-      )} */}
     </AnimateSharedLayout>
   );
 };
 
 export default Info;
-
-{
-  /* <motion.div className="info">
-          <h2 className="info__title">New Releases</h2>
-          <motion.div className="info__keyboard">
-            <InfoItem
-              className="keyboard"
-              imageClass="keyboardImage"
-              tagline="Spectre Pro"
-              image={keyboard}
-              list1="16.8M Color Lighting"
-              list2="3 Zone RGB Illumination"
-              list3="Per-key RGB Lighting Customization"
-              list4="Outemu Mechanical Switches"
-              list5="Detachable USB-C Cable"
-              layoutId="keyboard"
-            />
-          </motion.div>
-          <motion.div className="info__mouse">
-            <InfoItem
-              className="mouse"
-              imageClass="mouseImage"
-              tagline="Torque"
-              image={mouse}
-              list1="Ergonomically Built"
-              list2="Made For Gaming"
-              list3="Firm Grip Maximum Control"
-              list4="Less Cable Resistance, More Fluid Movement"
-              list5="11 Adjustable Lighting Modes"
-              layoutId="mouse"
-            />
-          </motion.div>
-          <motion.div className="info__cooler">
-            <InfoItem
-              className="cooler"
-              tagline="Mirage"
-              image={cooler}
-              list1="Optimal Cooling Performance Paired with Beautiful Aesthetic"
-              list2="Infinity Mirror LED Ring"
-              list3="High Static Pressure Fans"
-              list4="Outemu Mechanical Switches"
-              list5="All-in-one Universal Controller"
-              layoutId="cooler"
-            /> */
-}
