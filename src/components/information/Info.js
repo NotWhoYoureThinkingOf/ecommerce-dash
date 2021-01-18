@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Info.css";
 import keyboard from "../../assets/rgbkeyboard.png";
 import mouse from "../../assets/rgbmouse.png";
@@ -7,6 +7,10 @@ import InfoItem from "./InfoItem";
 import { motion, AnimateSharedLayout } from "framer-motion";
 import Circle from "./Circle";
 import CircleExpand from "./CircleExpand";
+import Circle2 from "./Circle2";
+import Circle2Expand from "./Circle2Expand";
+import Circle3 from "./Circle3";
+import Circle3Expand from "./Circle3Expand";
 
 const Info = () => {
   const [normal, setNormal] = useState(true);
@@ -45,6 +49,13 @@ const Info = () => {
     setNormal(true);
     console.log("normal");
   };
+
+  useEffect(() => {
+    console.log("normal", normal);
+    console.log("mouse", mouseItem);
+    console.log("keyboard", keyboardItem);
+    console.log("cooler", coolerItem);
+  }, [normal, mouseItem, keyboardItem, coolerItem]);
   // put in when framer is implemented
   // only show item name at first, hover over item, name drops down rgb diagonal stripe shows up, product slides out
 
@@ -109,9 +120,9 @@ const Info = () => {
             animate={{ transitionEnd: { zIndex: 100 } }}
             className="mouse__circleExpand"
           >
-            <CircleExpand
+            <Circle2Expand
               layoutId="mouseCircle"
-              layoutImg="image"
+              layoutImg="mouseImage"
               onClick={normalState}
             />
           </motion.div>
@@ -120,10 +131,14 @@ const Info = () => {
             animate={{ transitionEnd: { zIndex: 1 } }}
             className="mouse__circle"
           >
-            <Circle layoutId="mouseCircle" layoutImg="image" />
+            <Circle2 layoutId="mouseCircle" layoutImg="mouseImage" />
           </motion.div>
         )}
-        <motion.div className="info__cooler" style={{ zIndex: 0 }}>
+        <motion.div
+          onClick={coolerState}
+          className="info__cooler"
+          style={{ zIndex: 0 }}
+        >
           <InfoItem
             className="cooler"
             tagline="Mirage"
@@ -133,6 +148,25 @@ const Info = () => {
             layoutIdTitle="coolerTitle"
           />
         </motion.div>
+        {coolerItem ? (
+          <motion.div
+            animate={{ transitionEnd: { zIndex: 100 } }}
+            className="cooler__circleExpand"
+          >
+            <Circle3Expand
+              layoutId="coolerCircle"
+              layoutImg="coolerImage"
+              onClick={normalState}
+            />
+          </motion.div>
+        ) : (
+          <motion.div
+            animate={{ transitionEnd: { zIndex: 1 } }}
+            className="cooler__circle"
+          >
+            <Circle3 layoutId="coolerCircle" layoutImg="coolerImage" />
+          </motion.div>
+        )}
       </motion.div>
       {/* {mouseItem && (
         <motion.div className="info">

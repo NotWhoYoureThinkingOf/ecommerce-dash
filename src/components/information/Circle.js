@@ -8,7 +8,6 @@ import keyboardImg from "../../assets/keyboard-products.png";
 const Circle = ({ layoutId, layoutImg }) => {
   return (
     <motion.div
-      layout
       className="circle"
       initial={{ clipPath: "circle(120% at 22% 46%)" }}
       animate={{ clipPath: "circle(0% at 22% 46%)" }}

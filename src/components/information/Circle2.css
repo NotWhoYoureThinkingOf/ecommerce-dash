@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.circle2{
+  height:100%;
+  width:100%;
+  z-index:100;
+}
+
+.circle2 h3{
+  color:white;
+}
+
+.circle2Expand__return{
+  color:white;
+  position:absolute;
+  cursor:pointer;
+}
+
+.content2__left img{
+  filter: drop-shadow(-5px 30px 10px rgba(0,0,0,.6));
+  transform:scale(1);
+}
+
+.content2__right{
+  flex:0.4;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap:50px;
+}
+
+.content2__rightTop{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.content2__title{
+  font-family: 'Permanent Marker', cursive;
+  background:linear-gradient(
+    to right, 
+    #ff4445 20%, #ca10ad 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:transparent;
+  font-size:5rem;
+}
+
+.content2__right ul li{
+  color:white;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.content2__rightBuy{
+  margin-left: 35px;
+}
+
+.rightBuy2__container{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  max-width:600px;
+}
+
+.rightBuy2__container h3{
+  font-size: 2rem;
+  font-weight:500;
+  font-family: 'Permanent Marker', cursive;
+    background: linear-gradient( to right, #ff4445, #ca10ad 30% );
+    -webkit-background-clip: text;
+  -webkit-text-fill-color:transparent;
+}
+
+.rightBuy2__options{
+  display:flex;
+  gap:30px;
+}
+
+.rightBuy2__option{
+  flex:0.5;
+}
+
+.rightBuy2__option p{
+  margin-bottom:15px;
+}
+
+.rightBuy2__optionTitle{
+  color:white;
+}
+
+.rightBuy2__option form select{
+  padding:15px 20px;
+  font-size:1.1rem;
+  width:100%;
+  cursor:pointer;
+}
+
+.rightBuy2__quantity{
+  flex:0.5;
+}
+
+.rightBuy2__quantity p{
+  margin-bottom:15px;
+  color:white;
+}
+
+.rightBuy2__count{
+  display:flex;
+  align-items:center;
+  /* padding:0px 0px; */
+  gap:50px;
+}
+
+.rightBuy2__count p{
+  font-size:1.4rem;
+  margin:0;
+}
+
+.rightBuy2__count > .MuiSvgIcon-root{
+  border:2px solid rgba(0,0,0,.1);
+  border-radius:999px;
+  padding:12px;
+  transition: all 0.2s ease;
+  cursor:pointer;
+  color:white;
+}
+
+.rightBuy2__count > .MuiSvgIcon-root:hover{
+  background-color:rgba(27,23,37,1);
+  color:white;
+}
+
+.rightBuy2__addToCart{
+  display:flex;
+  align-items:center;
+  margin-top:30px;
+  width:fit-content;
+}
+
+.rightBuy2__addToCart > .MuiSvgIcon-root{
+  border:1px solid rgba(27,23,37,1);
+  padding:14px;
+  color:rgba(131,0,247,1);
+}
+
+.rightBuy2__addToCart > .MuiButton-root{
+  border-radius:0;
+  background-color:rgba(27,23,37,1);
+  color:white;
+  padding:15px 190px;
+}
+
+.rightBuy2__addToCart > .MuiButton-root:hover{
+  background-color:whitesmoke;
+  color:rgba(27,23,37,1)
+}
+
+.rightBuy2__addToCart > .MuiButton-root > .MuiButton-label{
+  transition: all .3s ease;
+}
