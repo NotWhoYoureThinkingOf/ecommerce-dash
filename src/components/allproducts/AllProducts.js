@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./AllProducts.css";
-import { db } from "../../firebase";
 import { AnimatePresence, motion } from "framer-motion";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";

@@ -49,13 +49,6 @@ const Info = () => {
     setNormal(true);
     console.log("normal");
   };
-
-  useEffect(() => {
-    console.log("normal", normal);
-    console.log("mouse", mouseItem);
-    console.log("keyboard", keyboardItem);
-    console.log("cooler", coolerItem);
-  }, [normal, mouseItem, keyboardItem, coolerItem]);
   // put in when framer is implemented
   // only show item name at first, hover over item, name drops down rgb diagonal stripe shows up, product slides out
 
