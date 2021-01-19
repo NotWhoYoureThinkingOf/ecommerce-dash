@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import "./Circle3Expand.css";
-import { Add, Remove } from "@material-ui/icons";
+import { Add, ArrowBack, Remove } from "@material-ui/icons";
 import { Button } from "@material-ui/core";
 import coolerImg from "../../assets/rgbcooler.png";
 
@@ -19,7 +19,7 @@ const Circle3Expand = ({ layoutId, onClick, layoutImg }) => {
     >
       <div className="circle3Expand__content">
         <h3 className="circle3Expand__return" onClick={onClick}>
-          Back to products
+          <ArrowBack />
         </h3>
         <div className="content3__left">
           <motion.img layoutId={layoutImg} src={coolerImg} alt="" />

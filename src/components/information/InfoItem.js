@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./InfoItem.css";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const InfoItem = ({
   className,
@@ -15,9 +15,8 @@ const InfoItem = ({
   layoutId,
   layoutIdImg,
   layoutIdTitle,
+  overflowImage,
 }) => {
-  const [hovered, setHovered] = useState(false);
-
   // consider making the pictures in photoshop to transition to
   // start with name and product showing, when hovered, have picture go to top right and shrink,
 
@@ -40,6 +39,10 @@ const InfoItem = ({
           </ul>
         </div>
       </div>
+      <motion.div className="infoItem__bg">
+        <img src={overflowImage} alt="" />
+        {/* <h2>Shop Now</h2> */}
+      </motion.div>
     </div>
   );
 };

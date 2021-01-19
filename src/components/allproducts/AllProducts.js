@@ -7,15 +7,9 @@ import CollectionProduct from "./CollectionProduct";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { releaseMice, selectMice } from "../../features/mice/miceSlice";
-import {
-  releaseKeyboards,
-  selectKeyboards,
-} from "../../features/keyboards/keyboardsSlice";
-import {
-  releaseHeadsets,
-  selectHeadsets,
-} from "../../features/headsets/headsetsSlice";
+import { selectMice } from "../../features/mice/miceSlice";
+import { selectKeyboards } from "../../features/keyboards/keyboardsSlice";
+import { selectHeadsets } from "../../features/headsets/headsetsSlice";
 import { useSelector } from "react-redux";
 
 const AllProducts = () => {

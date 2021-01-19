@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "./CircleExpand.css";
-import { Add, Remove } from "@material-ui/icons";
+import { Add, Remove, ArrowBack } from "@material-ui/icons";
 import { Button } from "@material-ui/core";
 import keyboardImg from "../../assets/keyboard-products.png";
 
@@ -19,7 +19,7 @@ const CircleExpand = ({ layoutId, onClick, layoutImg }) => {
     >
       <div className="circleExpand__content">
         <h3 className="circleExpand__return" onClick={onClick}>
-          Back to products
+          <ArrowBack />
         </h3>
         <div className="content__left">
           <motion.img layoutId={layoutImg} src={keyboardImg} alt="" />

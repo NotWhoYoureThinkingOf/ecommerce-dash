@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Circle.css";
-import { Add, Remove } from "@material-ui/icons";
+import { Add, Remove, ArrowBack } from "@material-ui/icons";
 import { Button } from "@material-ui/core";
 import keyboardImg from "../../assets/keyboard-products.png";
 
@@ -18,7 +18,9 @@ const Circle = ({ layoutId, layoutImg }) => {
       layoutId={layoutId}
     >
       <div className="circleExpand__content">
-        <h3 className="circleExpand__return">Back to products</h3>
+        <h3 className="circleExpand__return">
+          <ArrowBack />
+        </h3>
         <div className="content__left">
           <motion.img layoutId={layoutImg} src={keyboardImg} alt="" />
         </div>

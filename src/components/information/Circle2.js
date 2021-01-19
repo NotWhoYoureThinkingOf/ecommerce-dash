@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Circle2.css";
-import { Add, Remove } from "@material-ui/icons";
+import { Add, ArrowBack, Remove } from "@material-ui/icons";
 import { Button } from "@material-ui/core";
 import mouseImg from "../../assets/rgbmouse.png";
 
@@ -18,7 +18,9 @@ const Circle2 = ({ layoutId, layoutImg }) => {
       layoutId={layoutId}
     >
       <div className="circle2Expand__content">
-        <h3 className="circle2Expand__return">Back to products</h3>
+        <h3 className="circle2Expand__return">
+          <ArrowBack />
+        </h3>
         <div className="content2__left">
           <motion.img layoutId={layoutImg} src={mouseImg} alt="" />
         </div>

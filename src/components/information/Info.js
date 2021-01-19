@@ -139,6 +139,7 @@ const Info = () => {
             layoutId="cooler"
             layoutIdImg="coolerImg"
             layoutIdTitle="coolerTitle"
+            overflowImage={cooler}
           />
         </motion.div>
         {coolerItem ? (

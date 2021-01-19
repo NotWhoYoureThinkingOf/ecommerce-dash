@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Circle3.css";
-import { Add, Remove } from "@material-ui/icons";
+import { Add, ArrowBack, Remove } from "@material-ui/icons";
 import { Button } from "@material-ui/core";
 import coolerImg from "../../assets/rgbcooler.png";
 
@@ -18,7 +18,9 @@ const Circle3 = ({ layoutId, layoutImg }) => {
       layoutId={layoutId}
     >
       <div className="circle3Expand__content">
-        <h3 className="circle3Expand__return">Back to products</h3>
+        <h3 className="circle3Expand__return">
+          <ArrowBack />
+        </h3>
         <div className="content3__left">
           <motion.img layoutId={layoutImg} src={coolerImg} alt="" />
         </div>

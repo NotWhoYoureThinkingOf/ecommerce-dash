@@ -58,11 +58,17 @@
 .slick-slide{
   pointer-events:none;
   visibility: hidden;
+  /* width:100vw; */
+}
+
+.slick-slide div{
+  width:100%;
 }
 
 .slick-slide.slick-active.slick-current{
   pointer-events:auto;
   visibility: visible;
+  /* width:100%; */
 }
 
 .banner__carousel1{
