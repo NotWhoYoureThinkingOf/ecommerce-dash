@@ -81,9 +81,26 @@
   display:flex;
   align-items:center;
   border-left:1px solid rgba(0,0,0,0.1);
-  padding:30px 40px;
+  padding:20px 40px;
   gap:5px;
   cursor:pointer;
+}
+
+.search{
+  display:flex;
+  gap:20px;
+  position:relative;
+}
+
+.search form input{
+  padding:5px;
+  font-size:1rem;
+}
+
+.search__resultsContainer{
+  position:absolute;
+  bottom:-50;
+  background:red;
 }
 
 .cart__count{

@@ -97,10 +97,6 @@ const MainPage = () => {
       );
   }, []);
 
-  console.log("mice", mice);
-  console.log("keyboards", keyboards);
-  console.log("headsets", headsets);
-
   return (
     <motion.div className="mainPage">
       <div className="mainPage__header">
