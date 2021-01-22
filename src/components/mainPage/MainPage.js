@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Banner from "../banner/Banner";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
@@ -9,24 +9,24 @@ import "./MainPage.css";
 import { motion } from "framer-motion";
 import { db } from "../../firebase";
 import { useDispatch } from "react-redux";
-import { grabMice, selectMice } from "../../features/mice/miceSlice";
+import { grabMice, releaseMice } from "../../features/mice/miceSlice";
 import {
   grabKeyboards,
-  selectKeyboards,
+  releaseKeyboards,
 } from "../../features/keyboards/keyboardsSlice";
 import {
   grabHeadsets,
-  selectHeadsets,
+  releaseHeadsets,
 } from "../../features/headsets/headsetsSlice";
-import { useSelector } from "react-redux";
 
 const MainPage = () => {
   const dispatch = useDispatch();
-  const mice = useSelector(selectMice);
-  const keyboards = useSelector(selectKeyboards);
-  const headsets = useSelector(selectHeadsets);
 
   useEffect(() => {
+    dispatch(releaseMice());
+    dispatch(releaseKeyboards());
+    dispatch(releaseHeadsets());
+
     db.collection("products")
       .doc("MGSHZ1tujiFcMnsg47jF")
       .collection("product")

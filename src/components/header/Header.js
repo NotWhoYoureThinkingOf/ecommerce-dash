@@ -8,7 +8,11 @@ import "./Header.css";
 import { selectMice } from "../../features/mice/miceSlice";
 import { selectKeyboards } from "../../features/keyboards/keyboardsSlice";
 import { selectHeadsets } from "../../features/headsets/headsetsSlice";
-import { grab, release } from "../../features/product/productSlice";
+import {
+  selectSearch,
+  grabSearch,
+  releaseSearch,
+} from "../../features/search/searchSlice";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import SearchHeader from "./SearchHeader";
@@ -20,14 +24,17 @@ const Header = () => {
   const mice = useSelector(selectMice);
   const keyboards = useSelector(selectKeyboards);
   const headsets = useSelector(selectHeadsets);
+  const searches = useSelector(selectSearch);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const settingCombined = () => {
-      setCombinedProducts([...mice, ...keyboards, ...headsets]);
-    };
-
-    settingCombined();
+    // dispatch(releaseSearch());
+    setCombinedProducts([...mice, ...keyboards, ...headsets]);
+    // dispatch(
+    //   grabSearch({
+    //     combinedProducts: combinedProducts,
+    //   })
+    // );
   }, [mice, keyboards, headsets]);
 
   useEffect(() => {
@@ -39,6 +46,8 @@ const Header = () => {
     const results = fuse.search(input);
     setSearchProducts(results);
   }, [input]);
+
+  // console.log(searches);
 
   return (
     <div className="header">
@@ -78,6 +87,7 @@ const Header = () => {
               <ul>
                 {searchProducts.slice(0, 5).map((product) => (
                   <SearchHeader
+                    key={product.item.id}
                     image={product.item.image}
                     brand={product.item.brand}
                     name={product.item.name}

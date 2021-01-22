@@ -5,6 +5,7 @@ import productReducer from "../features/product/productSlice";
 import miceReducer from "../features/mice/miceSlice";
 import keyboardsReducer from "../features/keyboards/keyboardsSlice";
 import headsetsReducer from "../features/headsets/headsetsSlice";
+import searchReducer from "../features/search/searchSlice";
 
 export default configureStore({
   reducer: {
@@ -14,5 +15,6 @@ export default configureStore({
     mice: miceReducer,
     keyboards: keyboardsReducer,
     headsets: headsetsReducer,
+    search: searchReducer,
   },
 });

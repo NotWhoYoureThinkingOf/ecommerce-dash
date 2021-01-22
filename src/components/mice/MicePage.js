@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./MicePage.css";
-import { useParams } from "react-router-dom";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import {
@@ -18,7 +17,6 @@ import { useSelector } from "react-redux";
 import { selectProduct } from "../../features/product/productSlice";
 
 const Mice = () => {
-  const { productId } = useParams();
   const product = useSelector(selectProduct);
   const [scrolledFar, setScrolledFar] = useState(false);
 
@@ -29,10 +27,6 @@ const Mice = () => {
       setScrolledFar(false);
     }
   });
-
-  useEffect(() => {
-    // console.log(id);
-  }, []);
 
   return (
     <div className="micePage">
