@@ -23,8 +23,12 @@ const Header = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    setCombinedProducts([...mice, ...keyboards, ...headsets]);
-  }, []);
+    const settingCombined = () => {
+      setCombinedProducts([...mice, ...keyboards, ...headsets]);
+    };
+
+    settingCombined();
+  }, [mice, keyboards, headsets]);
 
   useEffect(() => {
     const fuse = new Fuse(combinedProducts, {
@@ -33,11 +37,8 @@ const Header = () => {
     });
 
     const results = fuse.search(input);
-    console.log("results", results);
     setSearchProducts(results);
   }, [input]);
-
-  console.log("searchProducts", searchProducts);
 
   return (
     <div className="header">
