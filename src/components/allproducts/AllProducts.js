@@ -62,7 +62,7 @@ const AllProducts = () => {
             <h3
               onClick={() => setSelectedProducts("headsets")}
               className={`allProducts__menuItem ${
-                selectedProducts === "headsets" && "headsets"
+                selectedProducts === "headsets" && "headsetsMenu"
               }`}
             >
               Headsets
@@ -70,7 +70,7 @@ const AllProducts = () => {
             <h3
               onClick={() => setSelectedProducts("keyboards")}
               className={`allProducts__menuItem ${
-                selectedProducts === "keyboards" && "keyboards"
+                selectedProducts === "keyboards" && "keyboardsMenu"
               }`}
             >
               Keyboards

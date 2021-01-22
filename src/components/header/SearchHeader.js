@@ -4,7 +4,21 @@ import { Link } from "react-router-dom";
 
 import React from "react";
 
-const SearchHeader = ({ image, brand, name, price, link, id, group, type }) => {
+const SearchHeader = ({
+  image,
+  brand,
+  name,
+  price,
+  link,
+  id,
+  group,
+  type,
+  description1,
+  description2,
+  description3,
+  description4,
+  description5,
+}) => {
   const dispatch = useDispatch();
 
   const grabSearchProduct = () => {
@@ -19,6 +33,11 @@ const SearchHeader = ({ image, brand, name, price, link, id, group, type }) => {
         id: id,
         group: group,
         type: type,
+        description1: description1,
+        description2: description2,
+        description3: description3,
+        description4: description4,
+        description5: description5,
       })
     );
   };

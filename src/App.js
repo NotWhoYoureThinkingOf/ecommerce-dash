@@ -30,11 +30,16 @@ function App() {
             <Keyboards />
           </Route>
 
-          <Route path="/products/:productId">
+          <Route path="/products/headsets/:productId">
             <Header />
             <ProductPage />
             <Footer />
           </Route>
+
+          <Route path="/products">
+            <AllProducts />
+          </Route>
+
           {/* all products page */}
           <Route path="/allproducts">
             <AllProducts />

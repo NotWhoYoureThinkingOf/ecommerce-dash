@@ -27,6 +27,25 @@ Goals:
 - Use GraphQL to get information from an API
 - Make full stack with Express and MongoDB
 
+To-do list:
+
+- add login/logout functionality
+- change search to "" after selecting a search product
+- make keyboards page
+- make mice page
+- edit headsets page to be customized based on selected headset
+- add cart functionality (adding/removing from cart)
+- make orders page
+- add stripe
+- make all links on website go somewhere ("still under construction" if no actual page)
+- add links to pages in hamburger menu on header
+- check into adding more dropdown menues in header
+- style the "Shop" drowpdown
+- add a confirmation to the enter email in footer
+- add page transitions
+- make responsive
+- add any animations that might improve the UX
+
 Notes
 
 MainPage.js:

@@ -37,12 +37,12 @@
   transition:all .3s ease;
 }
 
-.headsets{
+.headsetsMenu{
   background-color:white !important;
   color: #141e30 !important;
 }
 
-.keyboards{
+.keyboardsMenu{
   background-color:white !important;
   color: #141e30 !important;
 }
@@ -105,6 +105,12 @@
   pointer-events:none;
   visibility:hidden;
   display:flex !important;
+  justify-content: center;
+}
+
+.slick-slide div {
+  width: 100%;
+  display: flex;
   justify-content: center;
 }
 

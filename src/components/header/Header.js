@@ -8,13 +8,8 @@ import "./Header.css";
 import { selectMice } from "../../features/mice/miceSlice";
 import { selectKeyboards } from "../../features/keyboards/keyboardsSlice";
 import { selectHeadsets } from "../../features/headsets/headsetsSlice";
-import {
-  selectSearch,
-  grabSearch,
-  releaseSearch,
-} from "../../features/search/searchSlice";
 import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+
 import SearchHeader from "./SearchHeader";
 
 const Header = () => {
@@ -24,30 +19,33 @@ const Header = () => {
   const mice = useSelector(selectMice);
   const keyboards = useSelector(selectKeyboards);
   const headsets = useSelector(selectHeadsets);
-  const searches = useSelector(selectSearch);
-  const dispatch = useDispatch();
 
   useEffect(() => {
-    // dispatch(releaseSearch());
     setCombinedProducts([...mice, ...keyboards, ...headsets]);
-    // dispatch(
-    //   grabSearch({
-    //     combinedProducts: combinedProducts,
-    //   })
-    // );
   }, [mice, keyboards, headsets]);
 
   useEffect(() => {
     const fuse = new Fuse(combinedProducts, {
-      keys: ["brand", "name", "type", "group", "id", "imageUrl", "price"],
+      keys: [
+        "brand",
+        "name",
+        "type",
+        "group",
+        "id",
+        "imageUrl",
+        "price",
+        "description1",
+        "description2",
+        "description3",
+        "description4",
+        "description5",
+      ],
       includeScore: true,
     });
 
     const results = fuse.search(input);
     setSearchProducts(results);
   }, [input]);
-
-  // console.log(searches);
 
   return (
     <div className="header">
@@ -79,10 +77,10 @@ const Header = () => {
                 onChange={(e) => setInput(e.target.value)}
                 type="text"
                 spellCheck="false"
+                placeholder="What are you looking for today?"
               />
             </form>
             <Search />
-            {/* <HeaderOption name="Search" /> */}
             <div className="search__resultsContainer">
               <ul>
                 {searchProducts.slice(0, 5).map((product) => (
@@ -94,22 +92,12 @@ const Header = () => {
                     price={product.item.price}
                     link={`/products/${product.item.group}/${product.item.id}`}
                     id={product.item.id}
+                    description1={product.item.description1}
+                    description2={product.item.description2}
+                    description3={product.item.description3}
+                    description4={product.item.description4}
+                    description5={product.item.description5}
                   />
-                  // <Link
-                  //   to={`/products/${product.item.group}/${product.item.id}`}
-                  // >
-                  //   <li>
-                  //     <div className="result__img">
-                  //       <img src={product.item.image} alt="" />
-                  //     </div>
-                  //     <div className="result__info">
-                  //       <h3>
-                  //         {product.item.brand}&nbsp;{product.item.name}
-                  //       </h3>
-                  //       <p>${product.item.price}</p>
-                  //     </div>
-                  //   </li>
-                  // </Link>
                 ))}
               </ul>
             </div>
