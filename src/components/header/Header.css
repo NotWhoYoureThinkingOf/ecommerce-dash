@@ -98,9 +98,46 @@
 }
 
 .search__resultsContainer{
-  position:absolute;
-  bottom:-50;
-  background:red;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: fit-content;
+  border-radius: 10px;
+  overflow:hidden;
+  /* padding:10px 0; */
+  background:white;
+  box-shadow:2px 2px 5px black;
+}
+
+.search__resultsContainer ul {
+  display:flex;
+  flex-direction:column;
+  /* border-radius:15px; */
+  /* gap:10px; */
+  padding:10px 0;
+}
+
+.search__resultsContainer ul a{
+  text-decoration:none;
+}
+
+.search__resultsContainer ul li{
+  list-style-type: none;
+  color:#111;
+  display:flex;
+  gap:30px;
+  /* background: rgb(255, 136, 136); */
+  padding:5px 30px;
+}
+
+.result__info h3{
+  font-size:.85rem;
+}
+
+.search__resultsContainer ul .result__img img{
+  object-fit:contain;
+  height:80px;
+  width:80px;
 }
 
 .cart__count{

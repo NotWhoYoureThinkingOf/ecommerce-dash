@@ -1,0 +1,9 @@
+.keyboards{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+.keyboards__container{
+  flex:1;
+}

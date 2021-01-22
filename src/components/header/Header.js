@@ -4,19 +4,36 @@ import { Link } from "react-router-dom";
 import HeaderOption from "../headerOption/HeaderOption";
 import Dropdown from "./Dropdown";
 import Fuse from "fuse.js";
-import products from "../../productList.json";
 import "./Header.css";
+import { selectMice } from "../../features/mice/miceSlice";
+import { selectKeyboards } from "../../features/keyboards/keyboardsSlice";
+import { selectHeadsets } from "../../features/headsets/headsetsSlice";
+import { grab, release } from "../../features/product/productSlice";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import SearchHeader from "./SearchHeader";
 
 const Header = () => {
   const [searchProducts, setSearchProducts] = useState([]);
+  const [combinedProducts, setCombinedProducts] = useState([]);
   const [input, setInput] = useState("");
+  const mice = useSelector(selectMice);
+  const keyboards = useSelector(selectKeyboards);
+  const headsets = useSelector(selectHeadsets);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const fuse = new Fuse(products, {
-      keys: ["brand", "name", "id"],
+    setCombinedProducts([...mice, ...keyboards, ...headsets]);
+  }, []);
+
+  useEffect(() => {
+    const fuse = new Fuse(combinedProducts, {
+      keys: ["brand", "name", "type", "group", "id", "imageUrl", "price"],
       includeScore: true,
     });
+
     const results = fuse.search(input);
+    console.log("results", results);
     setSearchProducts(results);
   }, [input]);
 
@@ -58,8 +75,30 @@ const Header = () => {
             {/* <HeaderOption name="Search" /> */}
             <div className="search__resultsContainer">
               <ul>
-                {searchProducts.map((product) => (
-                  <li>{product.item.name}</li>
+                {searchProducts.slice(0, 5).map((product) => (
+                  <SearchHeader
+                    image={product.item.image}
+                    brand={product.item.brand}
+                    name={product.item.name}
+                    price={product.item.price}
+                    link={`/products/${product.item.group}/${product.item.id}`}
+                    id={product.item.id}
+                  />
+                  // <Link
+                  //   to={`/products/${product.item.group}/${product.item.id}`}
+                  // >
+                  //   <li>
+                  //     <div className="result__img">
+                  //       <img src={product.item.image} alt="" />
+                  //     </div>
+                  //     <div className="result__info">
+                  //       <h3>
+                  //         {product.item.brand}&nbsp;{product.item.name}
+                  //       </h3>
+                  //       <p>${product.item.price}</p>
+                  //     </div>
+                  //   </li>
+                  // </Link>
                 ))}
               </ul>
             </div>

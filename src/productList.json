@@ -4,167 +4,191 @@
     "imageUrl": "https://i.imgur.com/3QSGuN9.png",
     "name": "Aerox 3",
     "price": "59.99",
-    "id": "mouse1"
+    "type": "mice",
+    "id": "3E5Qx1qxXZSTuXMSzzdz"
   },
   {
     "brand": "SteelSeries",
     "imageUrl": "https://i.imgur.com/7FsD3Cz.png",
     "name": "Rival 310",
     "price": "99.99",
-    "id": "mouse2"
+    "type": "mice",
+    "id": "aupqDFp68ZBt750cuRDO"
   },
   {
     "brand": "SteelSeries",
     "imageUrl": "https://i.imgur.com/RIrKInL.png",
     "name": "Rival 650 Wireless",
     "price": "119.99",
-    "id": "mouse3"
+    "type": "mice",
+    "id": "esJKDif50o3Jlf7EmHQM"
   },
   {
     "brand": "Razer",
     "imageUrl": "https://i.imgur.com/9brvcOG.png",
     "name": "DeathAdder V2",
     "price": "69.99",
-    "id": "mouse4"
+    "type": "mice",
+    "id": "ggD97zTFlcLS1Oxonsdu"
   },
   {
     "brand": "HyperX",
     "imageUrl": "https://i.imgur.com/L5OHlQI.png",
     "name": "Pulsefire FPS Pro",
     "price": "44.99",
-    "id": "mouse5"
+    "type": "mice",
+    "id": "jhDlOI5GEPdLAxbrypLb"
   },
   {
     "brand": "SteelSeries",
     "imageUrl": "https://i.imgur.com/x6L6CqM.png",
     "name": "Rival 710",
     "price": "99.99",
-    "id": "mouse6"
+    "type": "mice",
+    "id": "t8sxxUp60BOZdp2ZGJxO"
   },
   {
     "brand": "SteelSeries",
     "imageUrl": "https://i.imgur.com/dX7tYho.png",
     "name": "Sensei 310",
     "price": "49.99",
-    "id": "mouse7"
+    "type": "mice",
+    "id": "wf8ZF5AFvG6cdDdV0k9p"
   },
   {
     "brand": "Razer",
     "imageUrl": "https://i.imgur.com/korLxX5.png",
     "name": "Taipan",
     "price": "99.99",
-    "id": "mouse8"
+    "type": "mice",
+    "id": "y20up1HgFxZ6aIqhjalu"
   },
   {
     "brand": "MSI",
     "imageUrl": "https://i.imgur.com/pvhiMHH.png",
     "name": "GK70",
     "price": "239.99",
-    "id": "keyboard1"
+    "type": "keyboards",
+    "id": "5vihg07yto7I6B82B5SN"
   },
   {
     "brand": "G.Skill",
     "imageUrl": "https://i.imgur.com/DKX9fIN.png",
     "name": "KM780R",
     "price": "198.99",
-    "id": "keyboard2"
+    "type": "keyboards",
+    "id": "MEaH2fUlQ1npswy36fpd"
   },
   {
     "brand": "Corsair",
     "imageUrl": "https://i.imgur.com/jZoBF1x.png",
     "name": "K100",
     "price": "229.99",
-    "id": "keyboard3"
+    "type": "keyboards",
+    "id": "PHtul0yP1IpyeWzbgiOE"
   },
   {
     "brand": "SteelSeries",
     "imageUrl": "https://i.imgur.com/QwgccMG.png",
     "name": "Apex Pro",
     "price": "199.99",
-    "id": "keyboard4"
+    "type": "keyboards",
+    "id": "VD5VBqw6OBtEhkh5NOZ2"
   },
   {
     "brand": "Cougar",
     "imageUrl": "https://i.imgur.com/EqZcn8G.png",
     "name": "450k",
     "price": "53.99",
-    "id": "keyboard5"
+    "type": "keyboards",
+    "id": "WrN6qrnB6GLR8dJOgQQA"
   },
   {
     "brand": "Logitech",
     "imageUrl": "https://i.imgur.com/lGl3rBr.png",
     "name": "G915",
     "price": "249.99",
-    "id": "keyboard6"
+    "type": "keyboards",
+    "id": "Z8Hhbj2hSAt0nLNYOSPJ"
   },
   {
     "brand": "Roccat",
     "imageUrl": "https://i.imgur.com/v3rGQZu.png",
     "name": "Vulcan 120 AIMO",
     "price": "159.99",
-    "id": "keyboard7"
+    "type": "keyboards",
+    "id": "bYHTxN4wXLOLvpkwXcWd"
   },
   {
     "brand": "Razer",
     "imageUrl": "https://i.imgur.com/aDq2lT7.png",
     "name": "BlackWidow V3",
     "price": "139.99",
-    "id": "keyboard8"
+    "type": "keyboards",
+    "id": "hNnrxao9t0DVVIw8jAhf"
   },
   {
     "brand": "SteelSeries",
     "imageUrl": "https://i.imgur.com/tfRRzyH.png",
     "name": "Arctis Pro + GameDAC",
     "price": "249.99",
-    "id": "headset1"
+    "type": "headsets",
+    "id": "47E0xNEzNsFX9XYklttG"
   },
   {
     "brand": "Razer",
     "imageUrl": "https://i.imgur.com/14qMPTv.png",
     "name": "Blackshark V2",
     "price": "179.99",
-    "id": "headset2"
+    "type": "headsets",
+    "id": "7YR8yDKGx4f9ZYzooWhi"
   },
   {
     "brand": "HyperX",
     "imageUrl": "https://i.imgur.com/eXgC9Y2.png",
     "name": "Cloud Stinger",
     "price": "49.99",
-    "id": "headset3"
+    "type": "headsets",
+    "id": "LavE9MECtp6NIulz42R3"
   },
   {
     "brand": "Logitech",
     "imageUrl": "https://i.imgur.com/vVAyyoR.png",
     "name": "G Pro X",
     "price": "129.99",
-    "id": "headset4"
+    "type": "headsets",
+    "id": "Pc8MbxvlQwB9imSRKpHQ"
   },
   {
     "brand": "Turtle Beach",
     "imageUrl": "https://i.imgur.com/ODmnvkw.png",
     "name": "Stealth 700 Gen 2",
     "price": "149.95",
-    "id": "headset5"
+    "type": "headsets",
+    "id": "Z5WnAadrFS7RB7NjLBAi"
   },
   {
     "brand": "HyperX",
     "imageUrl": "https://i.imgur.com/8M6d6Gz.png",
     "name": "Cloud Alpha",
     "price": "99.99",
-    "id": "headset6"
+    "type": "headsets",
+    "id": "dznRtE9s9e7lup9egnnl"
   },
   {
     "brand": "SteelSeries",
     "imageUrl": "https://i.imgur.com/7fHEYPd.png",
     "name": "Arctis 9",
     "price": "199.99",
-    "id": "headset7"
+    "type": "headsets",
+    "id": "iJmWTxqdrVPiuVyk4XgD"
   },
   {
     "brand": "Turtle Beach",
     "imageUrl": "https://i.imgur.com/uutPmev.png",
     "name": "Elite Atlas Aero",
     "price": "149.95",
-    "id": "headset8"
+    "type": "headsets",
+    "id": "jNP86aLcJKzxVgw5F0yq"
   }
 ]

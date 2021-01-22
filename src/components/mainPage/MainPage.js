@@ -44,6 +44,8 @@ const MainPage = () => {
               description3: doc.data().description3,
               description4: doc.data().description4,
               description5: doc.data().description5,
+              type: doc.data().type,
+              group: doc.data().group,
               pageImage: doc.data().pageImage,
             })
           )
@@ -67,6 +69,8 @@ const MainPage = () => {
               description3: doc.data().description3,
               description4: doc.data().description4,
               description5: doc.data().description5,
+              type: doc.data().type,
+              group: doc.data().group,
               pageImage: doc.data().pageImage,
             })
           )
@@ -90,6 +94,8 @@ const MainPage = () => {
               description3: doc.data().description3,
               description4: doc.data().description4,
               description5: doc.data().description5,
+              type: doc.data().type,
+              group: doc.data().group,
               pageImage: doc.data().pageImage,
             })
           )

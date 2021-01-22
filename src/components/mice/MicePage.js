@@ -51,7 +51,7 @@ const Mice = () => {
             <div className="topLeft__container">
               <p className="product__tagline">Product Tag Line</p>
               <h2>
-                {product.brand}&nbsp;{product.name}
+                {product?.brand}&nbsp;{product.name}
               </h2>
               <p className="product__description">
                 <ul>
