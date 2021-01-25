@@ -5,6 +5,8 @@ This project is to test out making an Ecommerce page with an admin dashboard whe
 - Firebase (for at least authorization, maybe more)
 - Framer Motion
 - Material UI
+- search functionality with fuse.js
+- parallax with react-rellax (still in progress)
 
 Potentially:
 
@@ -31,6 +33,8 @@ To-do list:
 
 - add login/logout functionality
 - change search to "" after selecting a search product
+- create product group pages (AllMice, AllKeyboards, AllHeadsets) and transform page individual product page bases on what product is clicked
+- change product page designs (design inspired by https://www.queengarnet.com/shop/probiotic-and-prebiotic-powder) (original product pages might be canceled out due to this if this works out better)
 - make keyboards page
 - make mice page
 - edit headsets page to be customized based on selected headset
@@ -44,6 +48,7 @@ To-do list:
 - add a confirmation to the enter email in footer
 - add page transitions
 - make responsive
+- implement parallax with react-rellax (already installed)
 - add any animations that might improve the UX
 
 Notes
@@ -72,3 +77,39 @@ Products.js:
 - add a page for keyboards
 - add a page for mice
 - change the pictures/details headsets page to call in selected item stuff
+
+Parallax Notes
+
+// ref (reference) being made is the container that the parallax motion elements are in. useTransform is saying that they are moving in relation to the ref at that speed
+
+// <div
+// className="allMice"
+// ref={ref}
+// style={{
+  //       background: "white",
+  //       position: "relative",
+  //     }}
+// >
+// <Header />
+// <motion.img
+// style={{
+  //         position: "absolute",
+  //         left: "50%",
+  //         top: 250,
+  //         y: rocketY,
+  //         // zIndex: 2,
+  //       }}
+// src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHbA7ixuyDr3rytiUOio2Pdu50DUWsxrxlrQ&usqp=CAU"
+// ></motion.img>
+// <motion.h1
+// style={{
+  //         position: "absolute",
+  //         left: "30%",
+  //         top: 250,
+  //         background: "black",
+  //         color: "white",
+  //         y: textY,
+  //         // zIndex: 2,
+  //       }}
+// ></motion.h1>
+// </div>

@@ -1,0 +1,103 @@
+.allMice{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+.allMice__container{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+
+.allMice__top{
+  flex:1;
+  display:flex;
+  height: calc(100vh - 84px);
+  overflow:hidden;
+}
+
+.allMice__topLeft{
+  flex:0.65;
+  background:rgb(255, 159, 159);  
+  /* background-image:url('../../assets/razerpromo3.jpg');
+  background-size:cover;
+  background-repeat:no-repeat; */
+}
+
+.allMice__topRight{
+  flex:0.35;
+  padding: 0 50px;
+  background:#111;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content: space-around;
+}
+
+.allMice__topRightText h2{
+  color:white;
+  font-weight:300;
+  font-size:2.5rem;
+}
+
+.allMice__topRightButton button{
+  color:white;
+  font-weight:300;
+  font-size:1.5rem;
+  border:2px solid white;
+}
+
+.allMice__topRightButton .MuiButton-root .MuiButton-label{
+  text-transform:capitalize;
+}
+
+.allMice__bottom{
+  
+}
+
+.allMice__bottomSelection{
+  display: flex;
+  justify-content: center;
+  /* gap:30px; */
+}
+
+.allMice__bottomMouse{
+  height:100px;
+  width:100px;
+  display:flex;
+  justify-content: center;
+  cursor:pointer;
+  padding:30px;
+}
+
+.allMice__bottomMouse:hover{
+  background:rgb(255, 159, 159);
+}
+
+.allMice__bottomMouse img{
+  object-fit:contain;
+  height:100px;
+}
+
+.allMice__bottomSelectedContainer{
+  display:flex;
+}
+
+.allMice__bottomSelectedLeft{
+  flex:0.35;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.allMice__bottomSelectedCenter{
+  flex:0.4;
+}
+
+.allMice__bottomSelectedRight{
+  flex:0.25;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}

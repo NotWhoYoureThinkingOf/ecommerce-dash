@@ -12,6 +12,7 @@ import Login from "./components/Login/Login";
 import MicePage from "./components/mice/MicePage";
 import Testing from "./components/testing/Testing";
 import Keyboards from "./components/keyboards/Keyboards";
+import AllMice from "./components/mice/AllMice";
 
 function App() {
   // const location = useLocation();
@@ -24,6 +25,10 @@ function App() {
           {/* product page */}
           <Route path="/products/mice/:productId">
             <MicePage />
+          </Route>
+
+          <Route path="/products/mice/">
+            <AllMice />
           </Route>
 
           <Route path="/products/keyboards/:productId">
