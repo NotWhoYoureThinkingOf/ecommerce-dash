@@ -3,8 +3,10 @@ import "./AllMice.css";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import {
+  AnimatePresence,
+  AnimateSharedLayout,
   motion,
-  useElementScroll,
+  // useElementScroll,
   useTransform,
   useViewportScroll,
 } from "framer-motion";
@@ -13,9 +15,11 @@ import { Add, Remove } from "@material-ui/icons";
 import promo from "../../assets/razerpromo3.jpg";
 import { selectMice } from "../../features/mice/miceSlice";
 import { useSelector } from "react-redux";
+import { TabWithRouter } from "./TabWithRouter";
+import MouseSelection from "./MouseSelection";
 
 const AllMice = () => {
-  // Notes about parallax in README.md as well
+  // Notes about parallax in google docs form as well
 
   // ref (reference) being made is the container that the parallax motion elements are in. useTransform is saying that they are moving in relation to the ref at that speed
 
@@ -53,9 +57,20 @@ const AllMice = () => {
   const mice = useSelector(selectMice);
   const ref = useRef();
   const { scrollY } = useViewportScroll(ref);
-  const rocketY = useTransform(scrollY, (y) => 1.5 * y);
-  const textY = useTransform(scrollY, (y) => 1.2 * y);
+  // const rocketY = useTransform(scrollY, (y) => 1.5 * y);
+  // const textY = useTransform(scrollY, (y) => 1.2 * y);
   const promoY = useTransform(scrollY, (y) => 0.5 * y);
+  const [selected, setSelected] = useState(0);
+  const [mouseId, setMouseId] = useState(null);
+  const [selectedMouse, setSelectedMouse] = useState(null);
+
+  useEffect(() => {
+    console.log(mouseId);
+    const result = mice.filter((mouse) => mouse.id === mouseId);
+    mouseId && setSelectedMouse(result);
+  }, [mouseId]);
+
+  console.log("selected mouse", selectedMouse);
 
   return (
     <div
@@ -106,73 +121,52 @@ const AllMice = () => {
         </div>
         <div className="allMice__bottom">
           <div className="allMice__bottomSelection">
-            {mice.map((mouse) => (
-              // image: image,
-              // brand: brand,
-              // name: name,
-              // price: price,
-              // description1: description1,
-              // description2: description2,
-              // description3: description3,
-              // description4: description4,
-              // description5: description5,
-              // link: link,
-              // id: id,
-              // have the mouse pictures along the top like the tabs in this link https://codesandbox.io/s/github/lintonye/smileys-in-motion/tree/simr-tab-with-router-end/smileys-in-motion-demos?file=/src/TabWithRouter.js. select the mouse picture and have the details and purchase buttons come in from the side maybe with staggered effects to give cooler appearance.
-              <motion.div className="allMice__bottomMouse">
-                <img src={mouse.image} alt="" />
-              </motion.div>
-            ))}
+            <AnimateSharedLayout>
+              <ul>
+                {mice.map((mouse, i) => (
+                  <motion.li
+                    className={`allMice__bottomMouse ${
+                      i === selected && "selected"
+                    }`}
+                    onClick={() => {
+                      setSelected(i);
+                      setMouseId(mouse.id);
+                    }}
+                    key={i}
+                    id={mouse.id}
+                  >
+                    <img src={mouse?.image} alt="" />
+                    {i === selected && (
+                      <motion.div
+                        className="underline"
+                        layoutId="underline"
+                        style={{
+                          background:
+                            "linear-gradient(  to right,#40fd0d, #01f3f6 60%)",
+                        }}
+                      ></motion.div>
+                    )}
+                  </motion.li>
+                ))}
+              </ul>
+            </AnimateSharedLayout>
           </div>
-          <div className="allMice__bottomSelected">
-            <div className="allMice__bottomSelectedContainer">
-              <div className="allMice__bottomSelectedLeft">
-                <div className="allMice__bottomSelectedLeftDetails">
-                  <p className="allMice__tagline">Product Tag Line</p>
-                  <h2>Mouse Brand/Name</h2>
-                  <ul className="allMice__description">
-                    <li>description 1</li>
-                    <li>description 2</li>
-                    <li>description 3</li>
-                    <li>description 4</li>
-                    <li>description 5</li>
-                  </ul>
-                </div>
-              </div>
-              <div className="allMice__bottomSelectedCenter"></div>
-              <div className="allMice__bottomSelectedRight">
-                <div className="allMice__bottomRightContainer">
-                  <h3>$249.00</h3>
-                  <div className="allMice__options">
-                    <div className="allMice__option">
-                      <p className="allMice__optionTitle">Product Option</p>
-                      <form>
-                        <select>
-                          <option value="1">Option 1</option>
-                          <option value="2">Option 2</option>
-                          <option value="3">Option 3</option>
-                          <option value="4">Option 4</option>
-                        </select>
-                      </form>
-                    </div>
-                    <div className="allMice__quantity">
-                      <p>Quantity</p>
-                      <div className="allMice__count">
-                        <Remove />
-                        <p>0</p>
-                        <Add />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="allMice__addToCart">
-                  <Add />
-                  <Button>ADD TO CART</Button>
-                </div>
-              </div>
-            </div>
-          </div>
+          <motion.div className="allMice__bottomSelected">
+            <MouseSelection
+              brand={selectedMouse[0].brand}
+              description1={selectedMouse[0].description1}
+              description2={selectedMouse[0].description2}
+              description3={selectedMouse[0].description3}
+              description4={selectedMouse[0].description4}
+              description5={selectedMouse[0].description5}
+              group={selectedMouse[0].group}
+              id={selectedMouse[0].id}
+              image={selectedMouse[0].image}
+              name={selectedMouse[0].name}
+              price={selectedMouse[0].price}
+              type={selectedMouse[0].type}
+            />
+          </motion.div>
         </div>
       </div>
       <Footer />

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 .allMice{
   min-height:100vh;
   display:flex;
@@ -53,13 +55,25 @@
 }
 
 .allMice__bottom{
-  
+  background:linear-gradient(to right, #111, #222);
+  padding:50px 0;
 }
 
-.allMice__bottomSelection{
+.allMice__bottomSelection ul{
   display: flex;
   justify-content: center;
   /* gap:30px; */
+}
+
+.allMice__bottomSelection ul li{
+  position:relative;
+}
+
+.allMice__bottomSelection ul li .underline{
+  position:absolute;
+  height:5px;
+  width:100%;
+  bottom:0;
 }
 
 .allMice__bottomMouse{
@@ -69,10 +83,11 @@
   justify-content: center;
   cursor:pointer;
   padding:30px;
+  
 }
 
 .allMice__bottomMouse:hover{
-  background:rgb(255, 159, 159);
+  /* background:rgb(255, 159, 159); */
 }
 
 .allMice__bottomMouse img{
@@ -80,24 +95,6 @@
   height:100px;
 }
 
-.allMice__bottomSelectedContainer{
-  display:flex;
-}
-
-.allMice__bottomSelectedLeft{
-  flex:0.35;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-
-.allMice__bottomSelectedCenter{
-  flex:0.4;
-}
-
-.allMice__bottomSelectedRight{
-  flex:0.25;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+.noSelectedMouse h1{
+  color:white;
 }

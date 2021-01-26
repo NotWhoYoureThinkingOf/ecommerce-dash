@@ -1,0 +1,151 @@
+.mouseSelection__bottomSelectedContainer{
+  display:flex;
+  padding:50px 0;
+}
+
+.mouseSelection__bottomSelectedLeft{
+  flex:0.65;
+  display:flex;
+  justify-content: center;
+}
+
+.mouseSelection__bottomSelectedLeft img{
+  object-fit:contain;
+  height:800px;
+  filter: drop-shadow(30px 30px 10px rgba(0,0,0,1));
+}
+
+
+.mouseSelection__bottomSelectedRight{
+  flex:0.35;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content: center;
+  width:100%;
+  gap:30px;
+  font-size:1rem;
+}
+
+
+.mouseSelection__bottomSelectedRightDetails{
+  color:white;
+  width:100%;
+}
+
+.mouseSelection__bottomSelectedRightDetails h2{
+  font-family: 'Permanent Marker', cursive;
+  background:linear-gradient(
+    to right, 
+    #ff4445 20%, #ca10ad 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:transparent;
+  font-size:5rem;
+  margin:20px 0;
+}
+
+.mouseSelection__bottomRightContainer{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  width:100%;
+}
+
+.mouseSelection__bottomRightContainer h3{
+  font-family: 'Permanent Marker', cursive;
+  background:linear-gradient(
+    to right, 
+    #ff4445 00%, #ca10ad 50%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:transparent;
+  font-size:2rem;
+}
+
+
+
+.mouseSelection__options{
+  display:flex;
+  gap:30px;
+}
+
+.mouseSelection__option{
+  color:white;
+  flex:0.5;
+}
+
+.mouseSelection__option p{
+  margin-bottom:15px;
+}
+
+.mouseSelection__optionTitle{
+  
+}
+
+.mouseSelection__option form select{
+  padding:15px 20px;
+  font-size:1.1rem;
+  width:100%;
+  cursor:pointer;
+}
+
+.mouseSelection__quantity{
+  display:flex;
+  flex-direction:column;
+  color:white;
+  flex:0.5;
+}
+
+.mouseSelection__quantity p{
+  margin-bottom:15px;
+  color:white;
+}
+
+.mouseSelection__count{
+  display:flex;
+  align-items:center;
+  gap:50px;
+}
+
+.mouseSelection__count p{
+  font-size:1.4rem;
+  margin:0;
+}
+
+.mouseSelection__count > .MuiSvgIcon-root{
+  border:2px solid rgba(0,0,0,.1);
+  border-radius:999px;
+  padding:12px;
+  transition: all 0.2s ease;
+  cursor:pointer;
+  color:white;
+}
+
+.mouseSelection__addToCart{
+  color:white;
+  display:flex;
+  align-items:center;
+  margin-top:30px;
+  width:100%;
+}
+
+.mouseSelection__addToCart > .MuiSvgIcon-root{
+  border:1px solid white;
+  padding:14px;
+  font-size:2.1rem;
+}
+
+.mouseSelection__addToCart > .MuiButton-root{
+  border-radius:0;
+  color:white;
+  padding:14px 00px;
+  border:1px solid white;
+  width:60%;
+}
+
+.mouseSelection__addToCart > .MuiButton-root > .MuiButton-label{
+  color:white;
+  /* text-transform:capitalize; */
+  font-size:1.2rem;
+}
