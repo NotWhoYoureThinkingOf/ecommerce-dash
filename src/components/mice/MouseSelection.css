@@ -1,23 +1,28 @@
+.mouseSelection{
+  /* position:absolute; */
+}
+
 .mouseSelection__bottomSelectedContainer{
   display:flex;
   padding:50px 0;
+  gap:300px;
 }
 
 .mouseSelection__bottomSelectedLeft{
-  flex:0.65;
+  flex:0.5;
   display:flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .mouseSelection__bottomSelectedLeft img{
   object-fit:contain;
-  height:800px;
-  filter: drop-shadow(30px 30px 10px rgba(0,0,0,1));
+  height:700px;
+  filter: drop-shadow(-30px 30px 10px rgba(0,0,0,1));
 }
 
 
 .mouseSelection__bottomSelectedRight{
-  flex:0.35;
+  flex:0.4;
   display:flex;
   flex-direction:column;
   align-items:center;

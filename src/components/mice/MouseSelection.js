@@ -20,20 +20,17 @@ const MouseSelection = ({
   price,
   type,
   key,
+  initial,
+  animate,
 }) => {
   return (
-    <motion.div
-      className="mouseSelection"
-      initial={{ x: 100 }}
-      animate={{ x: 0 }}
-    >
+    <motion.div className="mouseSelection" initial={initial} animate={animate}>
       <div className="mouseSelection__bottomSelectedContainer">
         <div className="mouseSelection__bottomSelectedLeft">
           <img src={image} alt="" />
         </div>
         <div className="mouseSelection__bottomSelectedRight">
           <div className="mouseSelection__bottomSelectedRightDetails">
-            <p className="mouseSelection__tagline">Product Tag Line</p>
             <h2>
               {brand}&nbsp;{name}
             </h2>

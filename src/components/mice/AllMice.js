@@ -152,20 +152,57 @@ const AllMice = () => {
             </AnimateSharedLayout>
           </div>
           <motion.div className="allMice__bottomSelected">
-            <MouseSelection
-              brand={selectedMouse[0].brand}
-              description1={selectedMouse[0].description1}
-              description2={selectedMouse[0].description2}
-              description3={selectedMouse[0].description3}
-              description4={selectedMouse[0].description4}
-              description5={selectedMouse[0].description5}
-              group={selectedMouse[0].group}
-              id={selectedMouse[0].id}
-              image={selectedMouse[0].image}
-              name={selectedMouse[0].name}
-              price={selectedMouse[0].price}
-              type={selectedMouse[0].type}
-            />
+            {selectedMouse === null ? (
+              <h1>Choose a mouse</h1>
+            ) : (
+              <div className="allMice__bottomShowcase">
+                {mice.map((mouse, i) => (
+                  <AnimatePresence exitBeforeEnter>
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={
+                        mouseId === mouse.id
+                          ? { x: 0, opacity: 1 }
+                          : { x: "-100vw", opacity: 0 }
+                      }
+                      exit={
+                        mouseId === mouse.id
+                          ? { x: "-100vw", opacity: 0 }
+                          : { x: 0, opacity: 1 }
+                      }
+                      transition={{
+                        duration: 1,
+                        opacity: {
+                          duration: 0.4,
+                        },
+                      }}
+                      style={
+                        mouseId === mouse.id
+                          ? { transform: "translateX(0%)" }
+                          : { transform: "translateX(-100vw)" }
+                      }
+                      className="allMice__showcaseMouse"
+                    >
+                      <MouseSelection
+                        key={i}
+                        brand={mouse.brand}
+                        description1={mouse.description1}
+                        description2={mouse.description2}
+                        description3={mouse.description3}
+                        description4={mouse.description4}
+                        description5={mouse.description5}
+                        group={mouse.group}
+                        id={mouse.id}
+                        image={mouse.image}
+                        name={mouse.name}
+                        price={mouse.price}
+                        type={mouse.type}
+                      />
+                    </motion.div>
+                  </AnimatePresence>
+                ))}
+              </div>
+            )}
           </motion.div>
         </div>
       </div>

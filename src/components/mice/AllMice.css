@@ -57,6 +57,8 @@
 .allMice__bottom{
   background:linear-gradient(to right, #111, #222);
   padding:50px 0;
+  overflow-x: hidden;
+  position:relative;
 }
 
 .allMice__bottomSelection ul{
@@ -67,6 +69,10 @@
 
 .allMice__bottomSelection ul li{
   position:relative;
+}
+
+.allMice__bottomSelection ul li img{
+  filter: drop-shadow(-7px 10px 10px rgba(0,0,0,1));
 }
 
 .allMice__bottomSelection ul li .underline{
@@ -97,4 +103,16 @@
 
 .noSelectedMouse h1{
   color:white;
+}
+
+.allMice__bottomShowcase{
+  position:relative;
+  min-height:900px;
+  display: flex;
+  align-items: center;
+}
+
+.allMice__showcaseMouse{
+  position:absolute;
+  width:100%;
 }
