@@ -21,10 +21,32 @@
 
 .allMice__topLeft{
   flex:0.65;
-  background:rgb(255, 159, 159);  
+  background:rgb(255, 159, 159);
+  position:relative;
   /* background-image:url('../../assets/razerpromo3.jpg');
   background-size:cover;
   background-repeat:no-repeat; */
+}
+
+.allMice__topLeftText{
+  position:absolute;
+  top:100px;
+  left:100px;
+  color:white;
+  width:500px;
+  display:flex;
+  flex-direction:column;
+  gap:30px;
+}
+
+.allMice__topLeftText h2{
+  font-weight:100;
+  font-size:2rem;
+  font-style:italic;
+}
+
+.allMice__topLeftText p{
+  font-weight:100;
 }
 
 .allMice__topRight{

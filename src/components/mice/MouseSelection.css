@@ -9,7 +9,7 @@
 }
 
 .mouseSelection__bottomSelectedLeft{
-  flex:0.5;
+  flex:0.45;
   display:flex;
   justify-content: flex-end;
 }

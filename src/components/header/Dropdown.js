@@ -20,7 +20,10 @@ const Dropdown = () => {
             </Link>
           </li>
           <li>
-            <Link to="/products/mice" style={{ padding: 0 }}>
+            <Link
+              to="/products/mice/3E5Qx1qxXZSTuXMSzzdz"
+              style={{ padding: 0 }}
+            >
               Mice
             </Link>
           </li>

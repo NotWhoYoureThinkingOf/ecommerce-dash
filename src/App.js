@@ -23,8 +23,12 @@ function App() {
         <Switch>
           {/* customer side */}
           {/* product page */}
-          <Route path="/products/mice/:productId">
+          {/* <Route path="/products/mice/:productId">
             <MicePage />
+          </Route> */}
+
+          <Route path="/products/mice/:productId">
+            <AllMice />
           </Route>
 
           <Route path="/products/mice/">
